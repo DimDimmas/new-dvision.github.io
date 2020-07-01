@@ -1,0 +1,343 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face{
+    font-family: montserrat;
+    src: url(../font/Montserrat-Regular.ttf);
+
+    font-family: dearest;
+    src: url(../font/Dearest.ttf);
+}
+
+@font-face{
+    font-family: dklemon;
+    src: url(../font/dklemon.otf);
+}
+
+.navbar{
+    position: fixed;    
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    z-index: 9;
+}
+
+.navbar img{
+    float: left;
+    margin: 10px;
+    width: 80%;
+}
+
+.bg-logo{
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-image: url('../img/bg-logo.png');
+    background-size: 100px;
+    margin-left: 5%;
+}
+
+.translation{
+    margin-top: 40px;
+    margin-right: 50px;
+    float: right;
+    width: auto;
+}
+
+.translation a{
+    display: inline-block;
+    position: relative;
+    color: #161634;
+    font-size: 14px;
+    font-family: 'montserrat';
+    text-decoration: none;
+}
+
+.translation a:after{    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #161634;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.grid-footer a:after{    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #ced6e0;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.translation a:hover:after, .grid-footer a:hover:after, .title-port a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+.box{
+    width: auto;
+    height: auto;
+    float: left;
+    margin-left: 15%;
+    margin-top: 8%;
+}
+
+.banner-image{
+    width: 500px;
+    height: 400px;
+    float: left;
+    background: url('../img/banner.png') no-repeat;
+    position: 0px;
+    background-size: 100%;
+    align-self: flex-end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+
+.bounce {
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-100px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+
+.banner-text{
+    width: 400px;
+    height: inherit;
+    float: left;
+}
+
+.banner-text p{
+    float: left;
+    text-align: left;
+}
+
+.box-bio{
+    width: 430px;
+    height: 150px;
+    background-color: rgba(61, 61, 61, .1);
+    margin-top: 3%;
+    margin-left: 30%;
+    margin-bottom: 2%;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.bio-img{
+    float: left;
+    width: 150px;
+    height: auto;
+    background: #000;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.bio-img img{
+    width: inherit;
+    height: inherit;
+}
+
+.bio-text{
+    float: left;
+    width: 250px;
+    height: auto;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.bio-text p{
+    font-size: 14px;
+    text-align: justify;
+}
+
+.vertical{
+    width: 0px;
+    height: 100px;
+    border: 1px #7f8c8d solid;
+    float: left;
+    margin-left: 10px;
+    margin-top: 25px;
+}
+
+.box-title{
+    padding: 2%;
+    width: 450px;
+    margin-top: 9%;
+    margin-left: 30%;
+    border-radius: 10px;
+    font-family: 'dearest';
+    color: #161634;
+}
+
+footer{
+    width: 100%;
+    height: 250px;
+    bottom: 0px;
+    overflow: hidden;
+    background: transparent;
+}
+
+.miring{
+    width: 105%;
+    transform: rotate(-2deg) translateX(-1%);
+    background-color: #161634;
+    height: 250px;
+    margin-top: 2%;
+    overflow: hidden;
+}
+
+.grid-footer{
+    float: left;
+    width: 25%;
+    height: inherit;
+    margin-left: 30px;
+    transform: rotate(2deg) translateX(1%);
+    top: 0px;
+    text-align: left;
+    padding: 30px;
+    color: #747d8c;;
+    margin-top: 1%;
+}
+
+.grid-footer p, .grid-footer a{
+    color: #ced6e0;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+.slide1{
+    background: url('../img/slide-1.jpg');
+}
+
+.slide2{
+    background: url('../img/slide-2.jpg');
+}
+
+.slide3{
+    background: url('../img/slide-3.jpg');
+}
+
+.box-image{
+    width: 50%;
+    margin-left: 5%;
+    float: left;
+    position: sticky;
+}
+
+.my-masonry-grid-item {
+    margin: 5px;    
+    max-width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform .2s;
+}
+
+.my-masonry-grid-item img{
+    width: 100%;
+}
+
+.my-masonry-grid-item:hover{    
+    transform: scale(1.5);
+    z-index: 99;
+}
+
+.title-port{
+    width: 30%;
+    margin-left: 10px;
+    float: left;
+    padding: 80px 0px 80px 80px;
+}
+
+.title-port p{
+    transform: rotate(-5deg) translateX(-1%);
+    font-family: 'dearest';
+    font-size: 100px;
+    color: #fff;
+    text-shadow: 3px 2px 1px black;
+}
+
+.title-port a{
+    border-radius: 5px;
+    padding: 8px;
+    background-color: #161634;
+    float: right;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+.title-port a:hover{
+    background-color: #fff;
+    color: #161634;
+    transition: .5s;
+}
+
+.title-port a:after{    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #161634;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.vid{
+    margin: 5px;    
+    width: 100%;    
+    overflow: hidden;    
+}
+
+.vid video{
+    width: 100%;
+}
+
+.banner{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 1px 1px 3px slategray;
+}
+
+.banner h1{
+    transform: rotate(-4deg) translateX(-1%);
+    font-size: 100px;
+    font-family: 'dearest';
+    color: #fff;
+    margin-top: 10%;    
+    text-shadow: 3px 2px 1px black;
+}
+
+.container{
+    display: flex;
+    padding: 5% 10%;    
+}

@@ -1,0 +1,504 @@
+@font-face{
+    font-family: josthin;
+    src: url(../font/JosefinSansBold-OVA7o.ttf);
+}
+
+html, body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+    scroll-behavior: smooth;
+    transition: ease;
+    margin: 0px;
+    padding: 0px;
+}
+
+span{
+    color: #000;
+}
+
+p, h1, h2{
+    color: #f1f2f6;
+}
+
+hr{
+    position: relative;
+    z-index: 1;
+}
+
+.dot{
+    border-radius: 50px;
+    background-color: #fff;
+    float: left;
+    position: relative;
+}
+
+.cover{
+    width: 100%;
+    height: 690px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+/* navigation */
+nav{
+    width: 70px;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    right: 0px;
+    color: #fff;
+    border-right: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo{
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    width: 3%;
+    z-index: 1;
+}
+
+.navigation{
+    position: absolute;
+    bottom: 0px;
+    left: -30px;
+    margin-bottom: 150px;
+}
+
+ul li{
+    text-align: center;
+    margin-top: 60px;
+    list-style: none;
+    transform: rotate(90deg);
+}
+
+a{        
+    color: rgba(192, 187, 192, 0.933);
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.active{
+    border-top: 3px solid white;
+    color: #fff;
+}
+
+/* nav left */
+.box-socmed{
+    width: 50px;
+    height: 150px;
+    position: fixed;
+    left: 0;
+    top: 40%;
+}
+
+.socmed{
+    margin-left: 10px;
+    background-color: #b83333;
+    margin-top: 10px;
+    border-radius: 25px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    float: left;
+    color: #000;
+    z-index: 1;
+}
+
+.socmed-mail{
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #b83333;
+    color: #000;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+    left: 25px;
+    top: -25px;
+    border-radius: 0px 0px 10px 0px;
+    font-family: 'josthin';
+}
+
+.socmed-phone{
+    display: inline;
+    padding: 8px 15px;
+    background-color: #b83333;
+    color: #000;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+    left: 25px;
+    top: -20px;
+    border-radius: 0px 0px 10px 0px;
+    font-family: 'josthin';
+}
+
+.socmed-ig{
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #b83333;
+    color: #000;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+    left: 25px;
+    top: -25px;
+    border-radius: 0px 0px 10px 0px;
+    font-family: 'josthin';
+}
+
+/* banner */
+#banner{    
+    position: relative;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+
+.line-1{
+    color: #fafafa;
+    z-index: 1;
+    position: relative;
+    top: -55%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,1);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 13em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+/* scrolldown line */
+.c-scrolldown {
+    width: 2px;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.c-scrolldown .c-line {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(to bottom, white 50%, rgba(255, 255, 255, 0) 50%);
+    background-position: 0 -60px;
+    background-size: 100% 200%;
+    animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards;
+}
+
+@keyframes scrolldown {
+    0% {
+        background-position: 0 -100px;
+    }
+    75% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 0px;
+    }
+}
+
+/* button scroll */
+#section10 a {
+    padding-top: 60px;
+}
+
+#section10 a span {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    margin-left: -15px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+
+#section10 a span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: sdb10 2s infinite;
+    animation: sdb10 2s infinite;
+    box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb10 {
+    0% {
+        -webkit-transform: translate(0, 0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        -webkit-transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes sdb10 {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* profile */
+#profile{
+    background: url('../img/bg-profile.jpg');    
+}
+
+#profile p{
+    word-spacing: 2px;
+    width: 40%;
+    text-indent: 20px;
+}
+
+#profile img{
+    position: relative;
+    margin-left: 60%;
+}
+
+.cap-profile{
+    position: relative;
+    top: 30%; 
+    margin-left: 10%;
+}
+
+/* skill */
+#skill{    
+    background: url('../img/bg-skill.jpg');
+    color: #fff;
+}
+
+.skill-layout{
+    font-family: 'josthin';
+    width: 40%;
+    height: 500px;
+    float: left;
+    position: relative;
+    left: 10%;
+    top: 20%;
+    margin: 10px;
+}
+
+table{
+    width: 100%;
+}
+
+.skill-layout > table td{
+    padding: 10px 20px;
+}
+
+.skill-bar{
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(190, 189, 189);
+    padding: 0px;
+}
+
+.skill-bar-d, .skill-bar-v, .skill-bar-w, .skill-bar-m{
+    position: relative;
+    left: 0;
+    width: 0%;
+    height: 40px;
+    z-index: 1;
+}
+
+.skill-bar-d{    
+    animation: skillanimationd 2s forwards;
+    background-color: rgb(59, 118, 185);
+}
+
+.skill-bar-v{
+    animation: skillanimationv 2s forwards;
+    background-color: rgb(218, 60, 60);
+}
+.skill-bar-w{
+    animation: skillanimationw 2s forwards;
+    background-color: rgb(225, 228, 72);
+}
+.skill-bar-m{
+    animation: skillanimationm 2s forwards;
+    background-color: rgb(192, 72, 138);
+}
+
+@keyframes skillanimationd{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 85%;
+    }
+}
+
+@keyframes skillanimationv{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 74%;
+    }
+}
+
+@keyframes skillanimationw{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 80%;
+    }
+}
+
+@keyframes skillanimationm{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 64%;
+    }
+}
+ 
+.bar{
+    position: relative;
+    float: left;
+}
+
+/* portfolio */
+#portfolio{
+    background: url('../img/bg-portfolio.jpg');
+}
+
+.container-portfolio{
+    width: 35%;
+    position: relative;
+    left: 20%;
+}
+
+.container-portfolio img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1a1a1a77;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+
+.container-portfolio:hover .overlay {
+    width: 100%;
+}
+
+.text {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}   
+
+/* contact */
+#contact{
+    background: url('../img/bg-contact.jpg');
+    text-align: center;
+}
+  
+.contact-right{
+    width: 50%;
+    height: 450px;
+    float: left;
+    position: relative;
+    left: 30%;
+    text-align: left;
+}
+  
+.contact-left > table{
+    width: 50%;
+    position: relative;
+    top: 20%;
+    border-left: 3px solid #fff;
+}
+  
+.contact-left > td{
+    padding: 0px;
+}
+  
+table{
+    width: 100%;
+    color: #fff;
+}
+  
+td{
+    padding: 5px;
+}
+  
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    border: 0px;
+}
+  
+.submit{
+    width: 20%;
+    background-color: #000;
+    float: right;
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 17px;
+    color: #fff;
+}

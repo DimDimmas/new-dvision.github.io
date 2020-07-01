@@ -1,0 +1,750 @@
+@font-face{
+    font-family: landasan;
+    src: url(../font/LandasansMedium-ALmWA.ttf);    
+}
+
+@font-face{
+  font-family: montserrat;
+  src: url(../font/Montserrat-Regular.ttf);
+  
+  font-family: bonjour;
+  src: url(../font/BonjourDeJongSans-vmgED.ttf);
+
+  font-family: josthin;
+  src: url(../font/JosefinSansSemibold-p7Z0v.ttf);
+
+}
+
+a{
+  text-decoration: none;
+}
+
+html{ 
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* preloader */
+#preloader-1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+#preloader-1 span {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  border: 8px solid darkslategray;
+  border-top: 8px solid transparent;
+  border-radius: 999px;
+}
+
+#preloader-1 span:nth-child(1) {
+  width: 80px;
+  height: 80px;
+  animation: spin-1 2s infinite linear;
+}
+
+@keyframes spin-1 {
+  0% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes spin-2 {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.5;
+  }
+}
+
+/* navigation */
+nav{
+  background-color: #218c74;
+  width: 100%;
+  height: inherit;
+  position: fixed;
+  transition: 0.4s;
+  padding: 20px 10px;
+  z-index: 50;
+}
+
+nav img{
+  width: 5%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 35%;
+  transition: 0.4s;
+}
+
+nav span{
+  font-size: 20px;
+  color: #fff;
+  font-family: 'montserrat';
+  top: 40%;
+  margin-left: 1%;
+  position: absolute;
+  transition: 0.4s;
+}
+
+/* banner */
+.bannere{
+  width: 100%;
+  height: 650px;
+  background-color: #dcf0ee;
+  overflow: hidden;
+}
+
+.caption{
+  z-index: 5;
+  top: 40%;
+  left: 50%;
+  display: inline-block;
+  position: absolute;
+  color: #fff;
+  font-size: 40px;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  font-family: 'landasan';
+}
+
+.btnProduct{
+  float: right;
+  padding: 5px 20px;
+  background-color: #fff;
+  font-size: 20px;
+  border: 2px solid darkslategray;
+  border-radius: 30px;
+  overflow: hidden;
+  z-index: 5;
+  text-decoration: none;
+  color: darkslategray;
+  
+  position: relative;
+  text-transform: uppercase;
+}
+
+.btnProduct:hover{
+  color: #fff;
+  background: transparent;
+  border-color: #fff;
+}
+
+.btnProduct,
+.btnProduct::after{
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btnProduct::before,
+.btnProduct::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background-color:darkslategray;
+}
+
+.btnProduct::after{
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 0;
+}
+
+.btnProduct:hover:after{
+  width: 100%;
+}
+
+.miring{
+  width: 110%;
+  height: 100px;
+  transform: rotate(2deg) translateX(3%);
+  background-color: #fff;
+  margin-top: -300px;
+  margin-left: -100px;
+}
+
+/* about */
+.container{
+  width: 80%;
+  display: block;
+  margin: 5% 10% 10% 10%;
+  text-align: center;
+}
+
+.container > div > .about{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #7f8c8d;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0px 10%;
+}
+
+/* category & catalogue*/
+.box-category{
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+  background-color: rgba(249, 202, 36, 0.9);
+  text-align: center;
+  padding: 3% 0%;
+}
+
+.cc-category{
+  position: relative;
+  left: 330px;
+  height: 600px;
+  margin-top: 3%;
+}
+
+.category{
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  float: left;
+  overflow: hidden;
+  margin-left: 30px;
+}
+
+.catalogue{
+  width: 90%;
+  height: 1300px;
+  background-color: #fff;
+  text-align: center;
+  padding: 3% 5%;
+}
+
+.box-catalogue{
+  width: 90%;
+  height: 300px;
+  margin: 3% 24%;
+  clear: both;
+}
+
+.catalogue > .box-catalogue{
+  margin: 3% 5%;
+}
+
+.card-catalogue{
+  width: 15%;
+  margin: 10px;
+  float: left;
+  padding: 20px;    
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.card-catalogue:hover {  
+  background-color: #f9ca24 ;
+  box-shadow: 1px 1px 10px;
+}
+
+.card-catalogue:hover .cc-boxtitle{  
+  text-decoration: underline;
+}
+
+.cc-boximg{
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.cc-boximg img{
+  width: 100%;
+  height: 200px;
+}
+
+.cc-boxtitle{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f9ca24;
+  color: #2f3640;
+  border-radius: 10px;
+  margin-top: -20px;
+  margin-left: -10px;
+  z-index: 1;
+  position: relative;
+  float: left;
+  text-transform: capitalize;
+}
+
+.name-catalogue{
+  color: #2f3640;
+  float: left;
+  position: relative;
+  left: 100px;
+}
+
+.button-catalogue{
+  margin-top: 50px;
+  color: #2f3640;
+  float: right;
+  position: relative;
+  right: 100px;
+  transition: 0.3s;
+  text-decoration: underline;
+}
+
+.button-catalogue:hover{
+  color: #f9ca24;
+}
+
+.cc-category > .miring{
+  transform: rotate(4deg) translateX(3%);
+  background-color: #fff;
+  position: relative;
+  margin-top: 50px;
+  z-index: 2;
+}
+
+.miring-2{
+  width: 110%;
+  height: 100px;
+  transform: rotate(-4deg) translateX(3%);
+  background-color: #fff;
+  position: relative;
+  margin-top: -100px;
+  z-index: 3;
+}
+
+/* customers */
+.box-customers{
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+}
+
+.card-customers{
+  width: 100%;
+  height: 200px;
+  background-color: ghostwhite;
+  float: left;
+}
+
+.card-customers > p{
+  position: relative;
+  top: 40%;
+  text-transform: uppercase;
+  color: #7f8c8d;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* contact */
+.contact{
+  width: 100%;
+  height: 650px;
+  background: url(../img/bg-footer.jpg);
+  background-size: cover;
+  text-align: center;  
+  padding-top: 3%;
+}
+
+.contact-left{
+  width: 30%;
+  height: 450px;
+  float: left;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  margin-left: 3%;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.contact-right{
+  width: 50%;
+  height: 450px;
+  float: left;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  margin-left: 3%;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.contact-left > table{
+  width: 50%;
+  position: relative;
+  top: 20%;
+  border-left: 3px solid #fff;
+}
+
+.contact-left > td{
+  padding: 0px;
+}
+
+table{
+  width: 100%;
+  color: #fff;
+}
+
+td{
+  padding: 5px;
+}
+
+input, textarea{
+  width: 100%;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  border: 0px;
+}
+
+.submit{
+  width: 20%;
+  background-color: #f9ca24;
+  float: right;
+  border: 0px;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 17px;
+  color: #2f3640;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* --------------------------------------------------------------------- */
+/* nav */
+.navigation{
+  width: 100%;
+  height: 66px;
+  background-color: #f9ca24 ;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.navigation ul{
+  float: right;
+  height: inherit;
+  margin-right: 50px;
+}
+
+.navigation ul li{  
+  padding: 5px 15px;
+  height: 40px;
+  float: left;
+  list-style: none;  
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+.nonact:after{
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;  
+}
+
+.nonact:hover:after{  
+  width: 100%;
+  left: 0%;
+}
+
+.navigation a{
+  color: #2f3640;
+}
+
+.active{
+  margin-top: -3px;
+  border-bottom: 3px solid #fff;
+}
+
+.navigation a > img{
+  position: relative;
+  top: 15px;
+  left: 40px;
+}
+
+.navigation a > span{
+  position: relative;
+  left: 50px;
+}
+
+/* layout */
+.cont-left{
+  padding-top: 150px;
+  float: left;
+  width: 20%;
+  height: 200px;
+  margin: 0px 10px 0px 50px;
+}
+
+.cont-right{
+  float: left;
+  width: 70%;
+  display: block;
+  margin: 0px 10px;
+  padding-left: 50px;
+  padding-top: 30px;
+  text-align: center;
+  font-family: 'josthin';
+  color: #2f3640;
+}
+
+/* sidenav */
+
+.sidenav{
+  width: 100%;
+  padding: 0px;
+  display: block;
+  background-color: #2f3640;
+  overflow-x: hidden;  
+}
+
+
+.sidenav-menu, .sidenav-menu a, .dropdown-btn{
+  color: #fff;  
+  text-align: left;
+  width: 95%;
+  padding: 10px;
+  display: block;
+  float: left;
+  font-size: 15px;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.dropdown-container {
+  display: none;  
+  padding-left: 8px;
+}
+
+/* product gallery */
+.product-gallery{
+  float: left;
+  width: 20%;
+  height: 300px;
+  background-color: #fff;  
+  border: 1px solid rgb(190, 190, 190);
+  overflow: hidden;
+  transition: 0.5s;
+  margin: 10px;
+  border-radius: 0px 0px 20px 0px;
+}
+
+.product-gallery:hover{
+  background-color: #f9ca24;
+}
+
+.product-gallery a{
+  color: #2f3640;
+}
+
+.product-gallery img{
+  width: 100%;  
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.product-gallery img:hover{
+  width: 105%;
+  margin-left: -2%;
+}
+
+.product-title{  
+  margin-top: 10px;
+  font-family: arial;
+  font-size: 14px;
+  text-align: left;
+  text-indent: 10px;
+}
+
+.product-price{
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  margin-top: 40px;
+  margin-right: 10px;
+}
+
+/* footer */
+.footer{
+  float: left;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #2f3640;
+}
+
+/* detail */
+.detail{
+  width: 100%;
+  height: 690px;
+}
+
+.judul{
+  display: inline;
+  font-size: 30px;
+  text-transform: capitalize;
+  position: relative;
+  left: 150px;
+  top: 50px;
+  color: #2f3640;
+  float: left;
+}
+
+.detail img{
+  width: 30%;
+  position: relative;
+  top: 100px;
+  left: -100px;
+}
+
+.deskripsi{
+  width: 50%;
+  float: right;
+  display: block;
+  padding: 5px;
+  position: relative;
+  top: 100px;
+}
+
+.deskripsi table{
+  border-collapse: collapse;
+  width: 90%;
+  border-color: #868686;
+}
+
+.deskripsi table tr td{  
+  color: #2f3640;  
+  border-color: #868686;
+}
+
+.slider-for{
+	width: 500px;
+	height: 250px;
+	margin: 30px auto 1px;
+	overflow: hidden;
+}
+.slider-for img, .slider-nav img{
+	width: 100%;
+}
+.slider-nav{
+	width: 500px;
+	height: 85px;
+	margin: auto;
+}
+.slider-nav .slick-track{
+	height: 85px;
+}
+.slick-arrow{
+		position: absolute;
+    top: 50%;
+    z-index: 50;
+    margin-top: -12px;
+}
+.slick-prev{
+	left: 0;
+}
+.slick-next{
+	right: 0;
+}
